@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        sh 'npm i -g yarn'
         sh 'yarn format'
         sh 'yarn build'
       }
